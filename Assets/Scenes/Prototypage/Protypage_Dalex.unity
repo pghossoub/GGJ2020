@@ -587,6 +587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 353336267}
+  m_screenState: {fileID: 11400000, guid: 01eab2c2c9258464a8338ff434fe4c05, type: 2}
 --- !u!4 &595958664
 Transform:
   m_ObjectHideFlags: 0

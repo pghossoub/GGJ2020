@@ -21,21 +21,4 @@ public class TestStateMachine : MonoBehaviour
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
         m_animator.SetBool(Animator.StringToHash("IsNormal"), true);
     }
-
-    private void Update()
-    {
-        switch (m_screenState.Value)
-        {
-            case ScreenState.LOUPE:
-                {
-                    SwitchToLoupe();
-                    break;
-                }
-            case ScreenState.NORMAL:
-                {
-                    SwitchToNormal();
-                    break;
-                }
-        }
-    }
 }

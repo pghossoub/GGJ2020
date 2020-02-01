@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a1a23fa25b44043897787fc20a25d9, type: 3}
   m_Name: ScreenState
   m_EditorClassIdentifier: 
-  Value: 1
+  Value: 2

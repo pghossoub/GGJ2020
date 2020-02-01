@@ -57,6 +57,7 @@ public class TestStateMachine : MonoBehaviour
         m_animator.SetBool(Animator.StringToHash("IsSalle"), true);
         m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
     }
+<<<<<<< HEAD
 
     private void Update()
     {
@@ -89,4 +90,6 @@ public class TestStateMachine : MonoBehaviour
                 }
         }
     }
+=======
+>>>>>>> 7c59bc9aa7d4edd767f42350f980c6344a1395f2
 }

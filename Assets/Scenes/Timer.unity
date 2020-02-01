@@ -154,9 +154,9 @@ MonoBehaviour:
     _constantValue: 10
     Variable: {fileID: 0}
   m_currentTime:
-    _useConstant: 1
+    _useConstant: 0
     _constantValue: 10
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 30ced834b25baf34ba252b8e17116bc4, type: 2}
   m_clockTickEvent: {fileID: 11400000, guid: 7efd47ba8b2b7e44e89f153ff1cddce7, type: 2}
 --- !u!4 &941882339
 Transform:

@@ -24,6 +24,7 @@ public class AssemblingVideos : MonoBehaviour
 
     private void Start()
     {
+        _videoPlayer.targetTexture.Release();
         StartCoroutine("ReadVideos");
     }
 

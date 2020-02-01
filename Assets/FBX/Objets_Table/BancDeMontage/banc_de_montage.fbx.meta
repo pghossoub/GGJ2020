@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 102b410d37be5a74aaf9a08b8ec6c6b1
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bobine
+    second: {fileID: 2100000, guid: 01743af05dd3725408831823b79e064c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bois
+    second: {fileID: -7905296519827699299, guid: 42e0a8d5f276a3a4398b03044fbebcb2,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cable_interrupteur
+    second: {fileID: 2100000, guid: 9d26bb04e14d2134aa6e7279018a22c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: emission_lampe
+    second: {fileID: 2100000, guid: 501011901030c174680ddf5d9933ee77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: interrupteur_bouton
+    second: {fileID: 2100000, guid: f6ee8d6e15ff14e488a77028c5df1f81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lame_ciseaux
+    second: {fileID: 2100000, guid: d89083f1150600f4d9d09bbfa72ea0f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: led_interrupteur
+    second: {fileID: 2100000, guid: 52c0e615509b9904fa27b11c4bada104, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lien_ciseaux
+    second: {fileID: 2100000, guid: 6e75b50e87ae91144862079c97031e70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: manche_ciseaux
+    second: {fileID: 2100000, guid: 093bd54a899b19a4a955e28d8efde108, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal2_bobine
+    second: {fileID: 2100000, guid: 258e1db5d9986ed428a756742caf525d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal2_lampe
+    second: {fileID: 2100000, guid: cad1baafbc59474429083ddf4cf6ff6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_bobine
+    second: {fileID: 2100000, guid: 482239b2403f8344395c02a6b32e3d4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_lampe
+    second: {fileID: 2100000, guid: 89fa01f71e04b2a418c314fd62a2ce97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_punaise
+    second: {fileID: 2100000, guid: 66be01ef0cd9d044f80e40108b359304, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_scotch
+    second: {fileID: 2100000, guid: 3ccd28819a307dd41b0d890fb79976f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: number1
+    second: {fileID: 2100000, guid: 17fded2fa1e797f41bdd3507ad302d67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: number2
+    second: {fileID: 2100000, guid: 456ce132acd80a749bf2ea5ca655071c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: number3
+    second: {fileID: 2100000, guid: b8bcd5a10cc8718458af16cb8336ce5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: number4
+    second: {fileID: 2100000, guid: 3584bd962b450934a93fd3567436d7cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: number5
+    second: {fileID: 2100000, guid: 2fb9b34b39b64c445bdef5ca584df312, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: number6
+    second: {fileID: 2100000, guid: 6a25c8309ac4a0e4191f7e48d3d67944, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic_interrupteur
+    second: {fileID: 2100000, guid: ca598bfede197f44b9b86cd41d759111, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic_lampe
+    second: {fileID: 2100000, guid: b0dab7670298c5c4c98cfaea6017f88a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: postIt_Erase
+    second: {fileID: 2100000, guid: be456e40dd0f1c0439b7aa4b26f45e6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: postIt_bloc
+    second: {fileID: 2100000, guid: 35c64f5194c83244aab624e706ae3f51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: postIt_watch
+    second: {fileID: 2100000, guid: 8253134e42bc3254485ebf45a76325ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: postit_Repair
+    second: {fileID: 2100000, guid: 473371bbbc42a3742ba7e30b30246c8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: punaise.bleue
+    second: {fileID: 2100000, guid: 987f407914e22e848847a01e908e079a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: punaise.jaune
+    second: {fileID: 2100000, guid: c230a7c55281c04468f0cf5245dece4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: punaise.rouge
+    second: {fileID: 2100000, guid: 3c69cb9f3c067ae40aca2ba497b7d227, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: punaise.verte
+    second: {fileID: 2100000, guid: 27d2d82a1e5d2754e890c174d684d93f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scotch
+    second: {fileID: 2100000, guid: cce6a46d312ed2f49b101c94d076dcfd, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

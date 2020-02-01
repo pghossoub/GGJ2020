@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
+using Marsheleene.Events;
 
 public class InputTest : MonoBehaviour
 {
     public ScreenStateVariable m_screenState;
 
+    public GameEvent m_goToIntro;   
+
+    private void Awake()
+    {
+        m_screenState.Value = ScreenState.STARTMENU;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -20,7 +27,7 @@ public class InputTest : MonoBehaviour
                     break;
                 case ScreenState.SALLE:
                     //Go to Start
-                    m_screenState.Value = ScreenState.START;
+                    m_screenState.Value = ScreenState.INTROLEVEL;
                     break;
             }
         }
@@ -36,7 +43,7 @@ public class InputTest : MonoBehaviour
                     //Go to Normal
                     m_screenState.Value = ScreenState.NORMAL;
                     break;
-                case ScreenState.START:
+                case ScreenState.INTROLEVEL:
                     //Go to Salle
                     m_screenState.Value = ScreenState.SALLE;
                     break;
@@ -48,7 +55,7 @@ public class InputTest : MonoBehaviour
             {
                 case ScreenState.NORMAL:
                     //Go to Start
-                    m_screenState.Value = ScreenState.START;
+                    m_screenState.Value = ScreenState.INTROLEVEL;
                     break;
                 case ScreenState.MONTAGE:
                     //Go to Salle
@@ -60,7 +67,11 @@ public class InputTest : MonoBehaviour
         {
             switch (m_screenState.Value)
             {
-                case ScreenState.START:
+                case ScreenState.STARTMENU:
+                    //Go to Intro
+                    m_goToIntro.Raise();
+                    break;
+                case ScreenState.INTROLEVEL:
                     //Go to Normal
                     m_screenState.Value = ScreenState.NORMAL;
                     break;

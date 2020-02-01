@@ -1,43 +1,75 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using Outline;
+using Marsheleene.Variables;
+using System;
 
 public class MouseOutline : MonoBehaviour
 {
-    public LayerMask layerMask;
+    public LayerMask m_fragmentLayerMask;
+    public LayerMask m_dropZoneLayerMask;
 
     public Camera mainCamera;
 
-    private Outline outline;
+    public BoolReference m_isDragging;
+
+    private Outline.Outline _outline;
 
     void Awake()
     {
-        //outline = GetComponent<Outline>();
+        _outline = GetComponent<Outline.Outline>();
+        _outline.OutlineColor = Color.yellow;
     }
     void Update()
     {
+        TotoAfrica();
+    }
+
+    private bool CastRay(LayerMask layerMask, out RaycastHit hit)
+    {
         Vector3 mousePosition3D = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
-
-        RaycastHit hit;
-
-        bool mouseOnObject = Physics.Raycast(
+        return Physics.Raycast(
             mainCamera.ScreenPointToRay(mousePosition3D),
             out hit,
-            float.PositiveInfinity, 
+            float.PositiveInfinity,
             layerMask
             );
+    }
 
-
-        if (mouseOnObject)
+    private void TotoAfrica()
+    {
+        RaycastHit hit;
+        if (m_isDragging.Value)
         {
-            GameObject objectOnMouse = hit.collider.gameObject;
-            outline = objectOnMouse.GetComponent<Outline>();
-            outline.OutlineWidth = 10f;
-            outline.OutlineColor = Color.yellow;
-            Debug.Log("mouseOnObject");
+            if (!CompareTag("Fragment"))
+            {
+                if (CastRay(m_dropZoneLayerMask, out hit))
+                {
+                    if (hit.collider.gameObject == gameObject)
+                    {
+                        _outline.enabled = true;
+                        _outline.OutlineWidth = 10f;
+                        return;
+                    }
+                }
+            }
         }
         else
-            if(outline != null)
-                outline.OutlineWidth = 0f;
+        {
+            if (CompareTag("Fragment"))
+            {
+                if (CastRay(m_fragmentLayerMask, out hit))
+                {
+                    if (hit.collider.gameObject == gameObject)
+                    {
+                        _outline.enabled = true;
+                        _outline.OutlineWidth = 10f;
+                        return;
+                    }
+                }
+            }
+        }
+        _outline.enabled = false;
+        _outline.OutlineWidth = 0f;
     }
+
 }

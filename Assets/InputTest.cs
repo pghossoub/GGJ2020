@@ -5,12 +5,12 @@ public class InputTest : MonoBehaviour
 {
     public ScreenStateVariable m_screenState;
 
-    public GameEvent m_goToIntro;   
+    public GameEvent m_goToIntro;
+    public GameEvent m_goToNormal;
+    public GameEvent m_goToLoupe;
+    public GameEvent m_goToMontage;
+    public GameEvent m_goToSalle;
 
-    private void Awake()
-    {
-        m_screenState.Value = ScreenState.STARTMENU;
-    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -19,15 +19,15 @@ public class InputTest : MonoBehaviour
             {
                 case ScreenState.NORMAL:
                     //Go to Loupe
-                    m_screenState.Value = ScreenState.LOUPE;
+                    m_goToLoupe.Raise();
                     break;
                 case ScreenState.MONTAGE:
                     //Go to Normal
-                    m_screenState.Value = ScreenState.NORMAL;
+                    m_goToNormal.Raise();
                     break;
                 case ScreenState.SALLE:
                     //Go to Start
-                    m_screenState.Value = ScreenState.INTROLEVEL;
+                    m_goToIntro.Raise(); 
                     break;
             }
         }
@@ -37,15 +37,15 @@ public class InputTest : MonoBehaviour
             {
                 case ScreenState.NORMAL:
                     //Go to Montage
-                    m_screenState.Value = ScreenState.MONTAGE;
+                    m_goToMontage.Raise(); ;
                     break;
                 case ScreenState.LOUPE:
                     //Go to Normal
-                    m_screenState.Value = ScreenState.NORMAL;
+                    m_goToNormal.Raise();
                     break;
                 case ScreenState.INTROLEVEL:
                     //Go to Salle
-                    m_screenState.Value = ScreenState.SALLE;
+                    m_goToSalle.Raise();
                     break;
             }
         }
@@ -55,11 +55,11 @@ public class InputTest : MonoBehaviour
             {
                 case ScreenState.NORMAL:
                     //Go to Start
-                    m_screenState.Value = ScreenState.INTROLEVEL;
+                    m_goToIntro.Raise();
                     break;
                 case ScreenState.MONTAGE:
                     //Go to Salle
-                    m_screenState.Value = ScreenState.SALLE;
+                    m_goToSalle.Raise();
                     break;
             }
         }
@@ -73,11 +73,11 @@ public class InputTest : MonoBehaviour
                     break;
                 case ScreenState.INTROLEVEL:
                     //Go to Normal
-                    m_screenState.Value = ScreenState.NORMAL;
+                    m_goToNormal.Raise();
                     break;
                 case ScreenState.SALLE:
                     //Go to Montage
-                    m_screenState.Value = ScreenState.MONTAGE;
+                    m_goToMontage.Raise();
                     break;
             }
         }

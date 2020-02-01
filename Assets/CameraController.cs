@@ -6,12 +6,10 @@ public class CameraController : MonoBehaviour
 {
     public Animator m_animator;
 
-    public ScreenStateVariable m_screenState;
-
     [ContextMenu("State > Intro")]
     public void SwitchToIntro()
     {
-        m_animator.SetBool(Animator.StringToHash("GameStarted"), true);
+        //m_animator.SetBool(Animator.StringToHash("GameStarted"), true);
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
         m_animator.SetBool(Animator.StringToHash("IsNormal"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), true);
@@ -68,5 +66,24 @@ public class CameraController : MonoBehaviour
         m_animator.SetBool(Animator.StringToHash("IsSalle"), true);
         m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
     }
+
+    //public void youWin()
+    //{
+    //    m_animator.SetBool(Animator.StringToHash("ItsAWin"), true);
+    //    m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
+    //    m_animator.SetBool(Animator.StringToHash("IsNormal"), false);
+    //    m_animator.SetBool(Animator.StringToHash("IsIntro"), true);
+    //    m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
+    //    m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
+    //}
+    //public void youLose()
+    //{
+    //    m_animator.SetBool(Animator.StringToHash("ItsAWin"), false);
+    //    m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
+    //    m_animator.SetBool(Animator.StringToHash("IsNormal"), true);
+    //    m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
+    //    m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
+    //    m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
+    //}
 
 }

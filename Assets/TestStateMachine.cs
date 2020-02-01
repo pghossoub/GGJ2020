@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+using Marsheleene.Variables;
+
 public class TestStateMachine : MonoBehaviour
 {
     public Animator m_animator;

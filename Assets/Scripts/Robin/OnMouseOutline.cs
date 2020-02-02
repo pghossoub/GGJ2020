@@ -27,7 +27,7 @@ public class OnMouseOutline : MonoBehaviour
                 }
                 break;
             case "BackPostIt":
-                if (gameView.Value == "loupe" && gameView.Value == "montage")
+                if (gameView.Value == "loupe" || gameView.Value == "montage")
                 {
                     GetComponent<Outline>().enabled = true;
                 }
@@ -37,6 +37,10 @@ public class OnMouseOutline : MonoBehaviour
                 {
                     GetComponent<Outline>().enabled = true;
                 }
+                else
+                {
+                    GetComponent<Outline>().enabled = false;
+                }
                 break;
             case "Banc":
                 if (gameView.Value == "table" && isDragging.Value)
@@ -44,7 +48,7 @@ public class OnMouseOutline : MonoBehaviour
                     GetComponent<Outline>().enabled = true;
                 }
                 break;
-            case "Repair": 
+            case "Repair":
                 if (gameView.Value == "montage")
                 {
                     GetComponent<Outline>().enabled = true;

@@ -19,6 +19,7 @@ public class MouseDragDrop : MonoBehaviour
     private void Start()
     {
         m_isDragging.Value = false;
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
     private void Update()
     {

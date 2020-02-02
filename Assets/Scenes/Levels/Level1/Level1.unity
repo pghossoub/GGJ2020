@@ -745,6 +745,7 @@ GameObject:
   - component: {fileID: 320072233}
   - component: {fileID: 320072232}
   - component: {fileID: 320072234}
+  - component: {fileID: 320072235}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -798,6 +799,24 @@ MonoBehaviour:
     - _Target: {fileID: 320072232}
       _MethodName: LoadNextLevel
       _PersistentArguments: []
+--- !u!114 &320072235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320072231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f352088f049de614e82e47b226f8148b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenes:
+  - m_Handle: 0
+  - m_Handle: 0
+  - m_Handle: 0
+  - m_Handle: 0
+  - m_Handle: 0
 --- !u!1 &381898090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1105,7 @@ GameObject:
   - component: {fileID: 1018178298}
   - component: {fileID: 1018178297}
   - component: {fileID: 1018178296}
+  - component: {fileID: 1018178300}
   m_Layer: 0
   m_Name: Fragment_1_1_A
   m_TagString: Fragment
@@ -1225,6 +1245,29 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 2
+--- !u!114 &1018178300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018178291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f6163547addce043bead07d63bc5cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMaskFragment:
+    serializedVersion: 2
+    m_Bits: 256
+  layerMaskDropZone:
+    serializedVersion: 2
+    m_Bits: 512
+  mainCamera: {fileID: 0}
+  m_isDragging:
+    _useConstant: 1
+    _constantValue: 0
+    Variable: {fileID: 0}
 --- !u!1 &1058504909
 GameObject:
   m_ObjectHideFlags: 0

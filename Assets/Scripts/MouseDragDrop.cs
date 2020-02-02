@@ -15,6 +15,11 @@ public class MouseDragDrop : MonoBehaviour
     private Transform _objectOnMouseTransform;
     private Vector3 startPosition;
 
+
+    private void Start()
+    {
+        m_isDragging.Value = false;
+    }
     private void Update()
     {
         //drag is On, object follow mouse
@@ -46,6 +51,13 @@ public class MouseDragDrop : MonoBehaviour
                 {
 
                     DropItem(hit.collider.gameObject, hit.collider.transform.position);
+                }
+
+                if((mouseOnObject && hit.collider.CompareTag("Workbench")))
+                {
+
+                    //SetupWorkbench();
+
                 }
                 
               

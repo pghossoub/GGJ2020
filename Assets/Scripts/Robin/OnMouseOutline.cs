@@ -11,8 +11,6 @@ public class OnMouseOutline : MonoBehaviour
     }
     void OnMouseEnter()
     {
-        Debug.Log(Input.mousePosition.ToString());
-
         GetComponent<Outline>().enabled = true;
     }
 

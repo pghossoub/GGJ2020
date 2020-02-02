@@ -13,6 +13,7 @@ public abstract class DropZone : MonoBehaviour
         rb.useGravity = true;
         //rb.isKinematic = false;
         rb.constraints = RigidbodyConstraints.FreezeRotation;
+        rb.isKinematic = true;
     }
 
     protected virtual void OnCollisionEnter(Collision collision)

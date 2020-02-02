@@ -2442,6 +2442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa223e157d6e8644a23183b8254a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: {fileID: 0}
 --- !u!114 &2232205465598030213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2615,13 +2616,27 @@ GameObject:
   - component: {fileID: 2229414914636324608}
   - component: {fileID: 7181974435888637238}
   - component: {fileID: 3501538650693294543}
-  m_Layer: 0
+  - component: {fileID: 2930472083417591062}
+  m_Layer: 9
   m_Name: table_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2930472083417591062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2930472083417591059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212cbb7f91c66df4ab84dee99798297b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mouseDragDrop: {fileID: 0}
 --- !u!33 &3183881208097800753
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2849,6 +2864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa223e157d6e8644a23183b8254a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: {fileID: 0}
 --- !u!114 &4433593371838311645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2890,13 +2906,59 @@ GameObject:
   - component: {fileID: 2099352206132922772}
   - component: {fileID: 618748572377950933}
   - component: {fileID: 1460220642887260594}
-  m_Layer: 0
+  - component: {fileID: 4518212042950015177}
+  - component: {fileID: 4518212042950015176}
+  - component: {fileID: 4518212042950015178}
+  m_Layer: 9
   m_Name: loupe
-  m_TagString: Untagged
+  m_TagString: DropZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4518212042950015176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518212042950015175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa223e157d6e8644a23183b8254a5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+--- !u!114 &4518212042950015177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518212042950015175}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
+--- !u!64 &4518212042950015178
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518212042950015175}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -511323021157907254, guid: 2e28788ec6767324db43f2d5eb94d8ff, type: 3}
 --- !u!1 &4520214703260663314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,6 +2992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa223e157d6e8644a23183b8254a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: {fileID: 0}
 --- !u!114 &4520214703260663316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3029,6 +3092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa223e157d6e8644a23183b8254a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: {fileID: 0}
 --- !u!114 &4725071305580055543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3583,13 +3647,59 @@ GameObject:
   - component: {fileID: 7186056838817436587}
   - component: {fileID: 8830233425500547773}
   - component: {fileID: 5910602111804561121}
-  m_Layer: 0
+  - component: {fileID: 6598243438274726807}
+  - component: {fileID: 6598243438274726808}
+  - component: {fileID: 6598243438274726806}
+  m_Layer: 9
   m_Name: banc_de_montage
-  m_TagString: Untagged
+  m_TagString: DropZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6598243438274726806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598243438274726805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa223e157d6e8644a23183b8254a5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+--- !u!114 &6598243438274726807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598243438274726805}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
+--- !u!64 &6598243438274726808
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598243438274726805}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2705683314943716760, guid: 102b410d37be5a74aaf9a08b8ec6c6b1, type: 3}
 --- !u!23 &6611938680824310984
 MeshRenderer:
   m_ObjectHideFlags: 0

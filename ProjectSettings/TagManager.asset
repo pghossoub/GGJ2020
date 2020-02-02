@@ -8,6 +8,8 @@ TagManager:
   - StartPostIt
   - ExitPostIt
   - BackPostIt
+  - posZ
+  - DropZone
   layers:
   - Default
   - TransparentFX

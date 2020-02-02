@@ -15,12 +15,20 @@ public class WorkbenchController : MonoBehaviour
     public Transform m_slot4Position;
     public Transform m_slot5Position;
 
+    private Vector3 _originalPosition;
+
     private void OnWorkbenchClicked()
     {
         if (m_isDragging.Value)
         {
+            _originalPosition = m_activeFragment.Value.transform.position;
             m_activeFragment.Value.transform.position = m_activeFragmentPosition.position;
         }
+    }
+
+    private void OnBackPostItClicked()
+    {
+        m_activeFragment.Value.transform.position = _originalPosition;
     }
 
     private void OnSlot1Clicked()

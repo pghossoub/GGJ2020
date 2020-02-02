@@ -60,6 +60,7 @@ public class MouseClickController : MonoBehaviour
                         break;
                     case "BackPostIt":
                         m_goToTable.Raise();
+                        m_activeFragment.Value.GetComponentInParent<Animator>().enabled = true;
                         break;
                     case "Loupe":
                         {
@@ -71,8 +72,8 @@ public class MouseClickController : MonoBehaviour
                         break;
                     case "Banc":
                         // Poser le fragment à la bonne position sur le bench
-                        m_activeFragment.Value.GetComponentInParent<Animator>().SetBool("IsActive", false);
-                        //m_activeFragment.Value.GetComponentInParent<Animator>().enabled = false;
+                        //m_activeFragment.Value.GetComponentInParent<Animator>().SetBool("IsActive", false);
+                        m_activeFragment.Value.GetComponentInParent<Animator>().enabled = false;
                         m_goToMontage.Raise();
                         break;
                     case "Workbench1":

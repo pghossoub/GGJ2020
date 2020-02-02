@@ -665,14 +665,13 @@ GameObject:
   - component: {fileID: 320072233}
   - component: {fileID: 320072232}
   - component: {fileID: 320072234}
-  - component: {fileID: 320072235}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &320072232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,6 +686,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_currentLevel: Level1
   m_nextLevel: Level2
+  m_workbenchFragments: {fileID: 11400000, guid: 2f74e42d977e542418a3739c932676f8,
+    type: 2}
 --- !u!4 &320072233
 Transform:
   m_ObjectHideFlags: 0
@@ -719,18 +720,6 @@ MonoBehaviour:
     - _Target: {fileID: 320072232}
       _MethodName: LoadNextLevel
       _PersistentArguments: []
---- !u!114 &320072235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320072231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f352088f049de614e82e47b226f8148b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &381898090
 GameObject:
   m_ObjectHideFlags: 0

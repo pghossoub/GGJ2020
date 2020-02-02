@@ -13,6 +13,15 @@ TagManager:
   - Banc
   - Loupe
   - posLoupe
+  - Workbench1
+  - Workbench2
+  - Workbench3
+  - Workbench4
+  - Workbench5
+  - Workbench6
+  - Interrupteur
+  - Repair
+  - Erase
   layers:
   - Default
   - TransparentFX

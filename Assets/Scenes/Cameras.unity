@@ -712,6 +712,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!84 &461025756
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 509
+  m_Height: 286
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 1
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &641419924
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +998,11 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
+<<<<<<< HEAD
   m_TargetTexture: {fileID: 1189191869}
+=======
+  m_TargetTexture: {fileID: 1337496992}
+>>>>>>> cf50fef9cbb4d20bf03b8fb1fffdeabb2e0586ed
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -1116,7 +1155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!84 &1383802535
+=======
+--- !u!84 &1337496992
+>>>>>>> cf50fef9cbb4d20bf03b8fb1fffdeabb2e0586ed
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1129,8 +1172,13 @@ RenderTexture:
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
   serializedVersion: 3
+<<<<<<< HEAD
   m_Width: 380
   m_Height: 214
+=======
+  m_Width: 509
+  m_Height: 286
+>>>>>>> cf50fef9cbb4d20bf03b8fb1fffdeabb2e0586ed
   m_AntiAliasing: 1
   m_MipCount: -1
   m_DepthFormat: 1
@@ -1607,8 +1655,13 @@ MonoBehaviour:
   sourceCamera: {fileID: 1992035926}
   outlineCamera: {fileID: 1174297963}
   outlineShaderMaterial: {fileID: 0}
+<<<<<<< HEAD
   renderTexture: {fileID: 1189191869}
   extraRenderTexture: {fileID: 1383802535}
+=======
+  renderTexture: {fileID: 1337496992}
+  extraRenderTexture: {fileID: 461025756}
+>>>>>>> cf50fef9cbb4d20bf03b8fb1fffdeabb2e0586ed
 --- !u!1 &2037804315
 GameObject:
   m_ObjectHideFlags: 0

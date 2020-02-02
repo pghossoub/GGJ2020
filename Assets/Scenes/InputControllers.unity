@@ -157,7 +157,22 @@ MonoBehaviour:
   m_layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  m_workbench1ClickedEvent: {fileID: 11400000, guid: 7909e15ae244c6c4dacea97bbdf688f5,
+    type: 2}
+  m_workbench2ClickedEvent: {fileID: 11400000, guid: b1b661109fecf0f40b55cdd856d08b17,
+    type: 2}
+  m_workbench3ClickedEvent: {fileID: 11400000, guid: 3c8e8175da9524145810280b0b1363d5,
+    type: 2}
+  m_workbench4ClickedEvent: {fileID: 11400000, guid: b1066ab12946a04449681b4f4312a7ae,
+    type: 2}
+  m_workbench5ClickedEvent: {fileID: 11400000, guid: c118b6ed201edd443ac3054eae377d11,
+    type: 2}
+  m_playVideoScreenEvent: {fileID: 11400000, guid: 78402a109ddf0aa48a227a098730152a,
+    type: 2}
+  m_repairEditing: {fileID: 11400000, guid: 45422990221924a44b85461d3d8627d8, type: 2}
+  m_eraseEditing: {fileID: 11400000, guid: aec82a5dbb37690408b869f834061437, type: 2}
   isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  isRepaired: {fileID: 11400000, guid: 6f86843586e45be40ab92aea306c4b29, type: 2}
   m_activeFragment: {fileID: 11400000, guid: 5c2a705b0c3b4c64298e07e703e2c0e6, type: 2}
 --- !u!4 &2123567538
 Transform:

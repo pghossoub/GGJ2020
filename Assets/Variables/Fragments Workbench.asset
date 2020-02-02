@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f0daf6868cf8a4c8c8f532cad3502a, type: 3}
   m_Name: Fragments Workbench
   m_EditorClassIdentifier: 
-  m_list: []
+  m_list:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

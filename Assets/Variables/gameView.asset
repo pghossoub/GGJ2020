@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23e8436e1db8b240ac64c7e924daa80, type: 3}
   m_Name: gameView
   m_EditorClassIdentifier: 
-  Value: 
+  Value: montage

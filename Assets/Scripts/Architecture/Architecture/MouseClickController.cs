@@ -2,6 +2,7 @@
 using cakeslice;
 using Marsheleene.Events;
 using Marsheleene.Variables;
+using Marsheleene.Events;
 
 public class MouseClickController : MonoBehaviour
 {
@@ -12,9 +13,21 @@ public class MouseClickController : MonoBehaviour
     public GameEvent m_goToSalle;
     public LayerMask m_layerMask;
 
+    [Header("Events")]
+
+    public GameEvent m_workbench1ClickedEvent;
+    public GameEvent m_workbench2ClickedEvent;
+    public GameEvent m_workbench3ClickedEvent;
+    public GameEvent m_workbench4ClickedEvent;
+    public GameEvent m_workbench5ClickedEvent;
+    public GameEvent m_playVideoScreenEvent;
+    public GameEvent m_repairEditing;
+    public GameEvent m_eraseEditing;
+
     [Header("Variables")]
     //public FragmentDrag fragmentDrag;
     public BoolVariable isDragging;
+    public BoolVariable isRepaired;
     public VideoFragmentVariable m_activeFragment;
 
     private Vector3 _mousePosition;
@@ -50,28 +63,132 @@ public class MouseClickController : MonoBehaviour
                         m_goToTable.Raise();
                         break;
                     case "Loupe":
-                        m_goToLoupe.Raise();
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_goToLoupe.Raise();
+                            }
+                        }
                         break;
                     case "Banc":
+                        // Poser le fragment à la bonne position sur le bench
                         m_goToMontage.Raise();
                         break;
+                    case "Workbench1":
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_workbench1ClickedEvent.Raise();
+                            }
+                            break;
+                        }
+                    case "Workbench2":
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_workbench2ClickedEvent.Raise();
+                            }
+                            break;
+                        }
+                    case "Workbench3":
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_workbench3ClickedEvent.Raise();
+                            }
+                            break;
+                        }
+                    case "Workbench4":
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_workbench4ClickedEvent.Raise();
+                            }
+                            break;
+                        }
+                    case "Workbench5":
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_workbench5ClickedEvent.Raise();
+                            }
+                            break;
+                        }
+                    case "Interrupteur":
+                        {
+                            if (!isDragging.Value && isRepaired.Value)
+                            {
+                                hit.collider.GetComponent<Animator>().SetTrigger("isPressed");
+                                m_goToSalle.Raise();
+                                m_playVideoScreenEvent.Raise();
+                            }
+                            break;
+                        }
+
+                    case "Repair":
+                        {
+                            if (!isDragging.Value)
+                            {
+                                m_repairEditing.Raise();
+
+                            }
+                            break;
+                        }
+                    case "Erase":
+                        {
+                            if (!isDragging.Value)
+                            {
+                                m_eraseEditing.Raise();
+                            }
+                            break;
+                        }
                     case "Fragment":
                         if (!isDragging.Value)
                         {
                             isDragging.Value = true;
-                            hit.collider.GetComponent<Animator>().SetBool("isDragging", true);
-                            //fragmentDrag.order = hit.collider.GetComponent<VideoFragment>().m_order;
-                            //fragmentDrag.meshFilter = hit.collider.GetComponent<MeshFilter>();
-                            //fragmentDrag.fragmentName = hit.collider.name;
-                            //fragmentDrag.video = hit.collider.GetComponent<VideoFragment>();
+                            switch(hit.collider.name)
+                            {
+                                case "Fragment_1_1_A":
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect1", true);
+                                    break;
+                                case "Fragment_1_1_B":
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect2", true);
+                                    break;
+                                case "Fragment_1_1_C":
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect3", true);
+                                    break;
+                                case "Fragment_1_1_D":
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect4", true);
+                                    break;
+                                case "Fragment_1_1_E":
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect5", true);
+                                    break;
+                            }
+
                             m_activeFragment.Value = hit.collider.GetComponent<VideoFragment>();
                         }
-                        //else if (hit.collider.name == fragmentDrag.fragmentName)
-                        else if (hit.collider.gameObject == m_activeFragment.Value.gameObject)
+                        else if (hit.collider.GetComponent<VideoFragment>() == m_activeFragment.Value)
                         {
                             m_activeFragment.Value = null;
                             isDragging.Value = false;
-                            hit.collider.GetComponent<Animator>().SetBool("isDragging", false);
+                            switch (hit.collider.name)
+                            {
+                                case "Fragment_1_1_A":
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect1", false);
+                                    break;
+                                case "Fragment_1_1_B":
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect2", false);
+                                    break;
+                                case "Fragment_1_1_C":
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect3", false);
+                                    break;
+                                case "Fragment_1_1_D":
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect4", false);
+                                    break;
+                                case "Fragment_1_1_E":
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect5", false);
+                                    break;
+                            }
                         }
                         break;
                 }

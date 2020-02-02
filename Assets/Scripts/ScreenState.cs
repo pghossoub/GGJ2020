@@ -3,7 +3,8 @@ public enum ScreenState
 {
     INVALID = -1,
 
-    START,
+    STARTMENU,
+    INTROLEVEL,
     NORMAL,
     LOUPE,
     MONTAGE,

@@ -144,6 +144,7 @@ public class MouseClickController : MonoBehaviour
                     case "Fragment":
                         if (!isDragging.Value)
                         {
+                            Debug.Break();
                             isDragging.Value = true;
                             hit.collider.GetComponent<Animator>().SetBool("IsActive", true);
                             //switch(hit.collider.name)

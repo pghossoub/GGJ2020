@@ -1766,6 +1766,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1625759604549383418, guid: 9dca6ec2c3165364e837e40ed82fb2bc,
+        type: 3}
+      propertyPath: fragmentDrag
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c2a705b0c3b4c64298e07e703e2c0e6,
+        type: 2}
     - target: {fileID: 1625759604549383422, guid: 9dca6ec2c3165364e837e40ed82fb2bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1921,6 +1927,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4865413088092940387, guid: 09e1c80028f2b4147844735eceed5fe3,
+        type: 3}
+      propertyPath: fragmentDrag
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c2a705b0c3b4c64298e07e703e2c0e6,
+        type: 2}
     - target: {fileID: 4865413088092940388, guid: 09e1c80028f2b4147844735eceed5fe3,
         type: 3}
       propertyPath: m_Name
@@ -2186,6 +2198,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.22709033
       objectReference: {fileID: 0}
+    - target: {fileID: 6851634613255072105, guid: 5528792ccb3f67e4db1245744c4334fa,
+        type: 3}
+      propertyPath: fragmentDrag
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c2a705b0c3b4c64298e07e703e2c0e6,
+        type: 2}
     - target: {fileID: 6851634613255072106, guid: 5528792ccb3f67e4db1245744c4334fa,
         type: 3}
       propertyPath: m_Enabled

@@ -15,12 +15,15 @@ public class MouseDragDrop : MonoBehaviour
     private Transform _objectOnMouseTransform;
     private Vector3 startPosition;
 
+    private Transform posObjetZ;
+
 
     private void Start()
     {
         m_isDragging.Value = false;
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
+
     private void Update()
     {
         //drag is On, object follow mouse
@@ -31,6 +34,7 @@ public class MouseDragDrop : MonoBehaviour
             //drag is On, on click, object drop in start position
             if (Input.GetButtonDown("Fire1"))
             {
+
                 Vector3 mousePosition3D = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
 
                 mousePosition3D.z = Vector3.Dot(
@@ -40,7 +44,6 @@ public class MouseDragDrop : MonoBehaviour
 
                 Vector3 mousePositionWorldSpace = mainCamera.ScreenToWorldPoint(mousePosition3D);
                 RaycastHit hit;
-
                 bool mouseOnObject = Physics.Raycast(
                     mainCamera.ScreenPointToRay(mousePosition3D),
                     out hit,
@@ -80,17 +83,27 @@ public class MouseDragDrop : MonoBehaviour
                 layerMaskFragment
                 );
 
-            if (mouseOnObject && hit.collider.CompareTag("Fragment"))
+            if (mouseOnObject) 
+                
             {
-                m_isDragging.Value = true;
-                _objectOnMouse = hit.collider.gameObject;
-                _objectOnMouseTransform = _objectOnMouse.transform;
-                startPosition = _objectOnMouseTransform.position;
 
-                var rb = _objectOnMouse.GetComponent<Rigidbody>();
-                rb.useGravity = false;
-                rb.constraints = RigidbodyConstraints.FreezeAll;
-                //rb.isKinematic = true;
+                if (hit.collider.CompareTag("Fragment"))
+                {
+
+                    m_isDragging.Value = true;
+                    hit.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+
+                    _objectOnMouse = hit.collider.gameObject;
+                    _objectOnMouseTransform = _objectOnMouse.transform;
+                    startPosition = _objectOnMouseTransform.position;
+
+                    var rb = _objectOnMouse.GetComponent<Rigidbody>();
+                    rb.useGravity = false;
+                    rb.constraints = RigidbodyConstraints.FreezeAll;
+                    //rb.isKinematic = true;
+                }
+
+                
             }
         }
     }
@@ -104,12 +117,11 @@ public class MouseDragDrop : MonoBehaviour
 
     private void ObjectFollowMouse()
     {
-        Vector3 mousePosition3D =Input.mousePosition;
+        _objectOnMouseTransform = GameObject.Find("Fragement_1_1_A").GetComponent<Transform>();
+        Vector3 mousePosition3D = Input.mousePosition;
 
-        mousePosition3D.z = Vector3.Dot(
-                     _objectOnMouseTransform.position - mainCamera.transform.position,
-                     mainCamera.transform.forward
-                   );
+        //mousePosition3D.z = Vector3.Dot( _objectOnMouseTransform.position - mainCamera.transform.position, mainCamera.transform.forward);
+        mousePosition3D.z = Vector3.Dot(Vector3.forward - mainCamera.transform.position, mainCamera.transform.forward);
 
         Vector3 mousePositionWorldSpace = mainCamera.ScreenToWorldPoint(mousePosition3D);
 

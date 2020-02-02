@@ -8,18 +8,11 @@ public class CameraController : MonoBehaviour
     public Animator m_animator;
     public BoolVariable isDragging;
     public StringVariable gameView;
-    public FragmentDrag fragmentDrag;
-    public GameObject fragmentLoupe;
 
-    private VideoFragment videoFragment;
-    private MeshFilter meshFragment;
 
     private void Start()
     {
         gameView.Value = "intro";
-        fragmentLoupe = GameObject.FindGameObjectWithTag("posLoupe");
-        videoFragment = fragmentLoupe.GetComponent<VideoFragment>();
-        meshFragment = fragmentLoupe.GetComponent<MeshFilter>();
     }
 
     [ContextMenu("State > Intro")]
@@ -37,7 +30,6 @@ public class CameraController : MonoBehaviour
     public void SwitchToLoupe()
     {
         gameView.Value = "loupe";
-        ActiveFragmentLoupe();
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), true);
         m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
@@ -108,10 +100,4 @@ public class CameraController : MonoBehaviour
     //    m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
     //    m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
     //}
-    private void ActiveFragmentLoupe()
-    {
-        videoFragment = fragmentDrag.video;
-        fragmentLoupe.SetActive(true);
-        meshFragment.mesh = fragmentDrag.meshFilter.mesh;
-    }
 }

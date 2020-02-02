@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         gameView.Value = "intro";
+        isDragging.Value = false;
     }
 
     [ContextMenu("State > Intro")]
@@ -41,7 +42,6 @@ public class CameraController : MonoBehaviour
     public void SwitchToTable()
     {
         gameView.Value = "table";
-        isDragging.Value = false;
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
         m_animator.SetBool(Animator.StringToHash("IsTable"), true);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), false);

@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Workbench.unity
     guid: 09f0e7520acb45543be3edd996f59c2b
   - enabled: 1
+    path: Assets/Scenes/PlayButton.unity
+    guid: cac6868d4e66b1f4e831f3f159e8eebf
+  - enabled: 1
     path: Assets/Scenes/Levels/Level1/Level1.unity
     guid: 29fc50b663e7bc049b0c91ffd7b94d6c
   - enabled: 1

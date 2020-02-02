@@ -56,6 +56,7 @@ public class MouseClickController : MonoBehaviour
                         if (!isDragging.Value)
                         {
                             isDragging.Value = true;
+                            hit.collider.GetComponent<Animator>().SetBool("isDragging", true);
                             fragmentDrag.order = hit.collider.GetComponent<VideoFragment>().m_order;
                             fragmentDrag.meshFilter = hit.collider.GetComponent<MeshFilter>();
                             fragmentDrag.fragmentName = hit.collider.name;
@@ -63,6 +64,7 @@ public class MouseClickController : MonoBehaviour
                         } else if (hit.collider.name == fragmentDrag.fragmentName)
                         {
                             isDragging.Value = false;
+                            hit.collider.GetComponent<Animator>().SetBool("isDragging", false);
                         }
                         break;
                 }

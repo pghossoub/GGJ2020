@@ -5,12 +5,14 @@ using cakeslice;
 
 public class OnMouseOutline : MonoBehaviour
 {
-    private void Awake()
+
+    private void Update()
     {
-        //GetComponent<Outline>().enabled = false;
     }
     void OnMouseEnter()
     {
+        Debug.Log(Input.mousePosition.ToString());
+
         GetComponent<Outline>().enabled = true;
     }
 

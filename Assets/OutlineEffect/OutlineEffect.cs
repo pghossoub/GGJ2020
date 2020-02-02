@@ -247,8 +247,8 @@ namespace cakeslice
         //    foreach(Outline oL in o)
         //    {
         //        oL.enabled = false;
-        //        // oL.enabled = true;
-        //    }
+        //oL.enabled = true;
+        //   }
         //}
 
         void OnDestroy()

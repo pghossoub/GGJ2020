@@ -4,32 +4,49 @@ using UnityEngine;
 
 public class DropZoneWorkbench : DropZone
 {
-    private BoxCollider _boxColliderSaved;
-    public void SetupWorkbench()
+    public Transform dropPoint;
+
+    private bool isWorkbenchUsed = false;
+    private Collider[] workBenchColliders;
+    private Collider[] slotsColliders;
+
+    public override void DropItem(GameObject item, Vector3 dropPosition)
     {
         //Bouger la camera
-        BoxCollider[] boxcolliders = gameObject.GetComponents<BoxCollider>();
-        foreach (BoxCollider boxcollider in boxcolliders)
+
+        base.DropItem(item, dropPosition);
+        item.transform.position = dropPoint.position;
+
+        isWorkbenchUsed = true;
+
+        workBenchColliders = GetComponents<Collider>();
+
+        foreach (Collider collider in workBenchColliders)
         {
-            if (boxcollider.isTrigger)
+            //Debug.Log("+");
+            if (collider.isTrigger)
             {
-                boxcollider.enabled = false;
-                _boxColliderSaved = boxcollider;
+                //Debug.Log("*");
+                collider.enabled = false;
             }
         }
-        StartCoroutine(SetupSlots());
- 
+
+        slotsColliders = GetComponentsInChildren<Collider>();
+        foreach (Collider collider in slotsColliders)
+        {
+            if (collider.isTrigger && collider.name == gameObject.name)
+            {
+                Debug.Log("-");
+                collider.enabled = true;
+            }
+        }
     }
 
-    IEnumerator SetupSlots()
+    protected override void OnCollisionEnter(Collision collision)
     {
-        yield return new WaitForSeconds(2.0f);
-        ActivateSlots();
-
-    }
-
-    private void ActivateSlots()
-    {
-
+        if (isWorkbenchUsed)
+            return;
+        else
+            base.OnCollisionEnter(collision);
     }
 }

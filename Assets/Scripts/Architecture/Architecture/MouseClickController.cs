@@ -12,12 +12,15 @@ public class MouseClickController : MonoBehaviour
     public GameEvent m_goToSalle;
     public LayerMask m_layerMask;
 
+    [Header("Variables")]
+    //public FragmentDrag fragmentDrag;
+    public BoolVariable isDragging;
+    public VideoFragmentVariable m_activeFragment;
+
     private Vector3 _mousePosition;
 
     private Outline _outline;
     // Update is called once per frame
-    public BoolVariable isDragging;
-    public FragmentDrag fragmentDrag;
 
     private void Update()
     {
@@ -57,12 +60,16 @@ public class MouseClickController : MonoBehaviour
                         {
                             isDragging.Value = true;
                             hit.collider.GetComponent<Animator>().SetBool("isDragging", true);
-                            fragmentDrag.order = hit.collider.GetComponent<VideoFragment>().m_order;
-                            fragmentDrag.meshFilter = hit.collider.GetComponent<MeshFilter>();
-                            fragmentDrag.fragmentName = hit.collider.name;
-                            fragmentDrag.video = hit.collider.GetComponent<VideoFragment>();
-                        } else if (hit.collider.name == fragmentDrag.fragmentName)
+                            //fragmentDrag.order = hit.collider.GetComponent<VideoFragment>().m_order;
+                            //fragmentDrag.meshFilter = hit.collider.GetComponent<MeshFilter>();
+                            //fragmentDrag.fragmentName = hit.collider.name;
+                            //fragmentDrag.video = hit.collider.GetComponent<VideoFragment>();
+                            m_activeFragment.Value = hit.collider.GetComponent<VideoFragment>();
+                        }
+                        //else if (hit.collider.name == fragmentDrag.fragmentName)
+                        else if (hit.collider.gameObject == m_activeFragment.Value.gameObject)
                         {
+                            m_activeFragment.Value = null;
                             isDragging.Value = false;
                             hit.collider.GetComponent<Animator>().SetBool("isDragging", false);
                         }

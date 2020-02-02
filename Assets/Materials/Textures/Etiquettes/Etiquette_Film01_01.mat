@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: etiquette_Film01_01
+  m_Name: Etiquette_Film01_01
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHATEST_ON
   m_LightmapFlags: 4
@@ -59,7 +59,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
+    - _DetailNormalMapScale: -3.27
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5

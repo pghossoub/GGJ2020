@@ -1012,6 +1012,10 @@ MonoBehaviour:
   m_slot3Position: {fileID: 814607662}
   m_slot4Position: {fileID: 1901625165}
   m_slot5Position: {fileID: 774470973}
+  m_changePositionDelay:
+    _useConstant: 1
+    _constantValue: 2
+    Variable: {fileID: 0}
 --- !u!114 &1484516841
 MonoBehaviour:
   m_ObjectHideFlags: 0

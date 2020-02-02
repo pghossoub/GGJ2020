@@ -157,7 +157,7 @@ MonoBehaviour:
     type: 2}
   m_playLoupeDelay:
     _useConstant: 1
-    _constantValue: 1
+    _constantValue: 2
     Variable: {fileID: 0}
   m_loupe: {fileID: 1618797368}
   m_screen: {fileID: 1960128364}

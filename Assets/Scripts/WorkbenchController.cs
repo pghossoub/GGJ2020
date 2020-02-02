@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 using Marsheleene.Variables;
 
@@ -15,6 +16,8 @@ public class WorkbenchController : MonoBehaviour
     public Transform m_slot4Position;
     public Transform m_slot5Position;
 
+    public FloatReference m_changePositionDelay;
+
     private Vector3 _originalPosition;
 
     private void OnWorkbenchClicked()
@@ -28,8 +31,15 @@ public class WorkbenchController : MonoBehaviour
 
     private void OnBackPostItClicked()
     {
+        StartCoroutine(_ChangePositionDelayed());
+    }
+
+    private IEnumerator _ChangePositionDelayed()
+    {
+        yield return new WaitForSeconds(m_changePositionDelay.Value);
         m_activeFragment.Value.transform.position = _originalPosition;
     }
+
 
     private void OnSlot1Clicked()
     {

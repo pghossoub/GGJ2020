@@ -66,6 +66,7 @@ public class AssemblingVideos : MonoBehaviour
 
     private IEnumerator _PlayFragments()
     {
+        _videoPlayer.targetTexture.Release();
         Material originalMaterial = _activeRenderer.material;
         _activeRenderer.sharedMaterial = m_videoMaterial;
         for (int i = 0; i < m_activeFragments.m_fragments.Length; i++)
@@ -74,8 +75,7 @@ public class AssemblingVideos : MonoBehaviour
             _videoPlayer.Play();
             yield return new WaitForSeconds((float)_videoPlayer.length);
         }
-        Debug.Log("Done");
         _activeRenderer.sharedMaterial = originalMaterial;
-        _videoPlayer.targetTexture.Release();
+        //_videoPlayer.targetTexture.Release();
     }
 }

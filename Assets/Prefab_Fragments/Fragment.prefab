@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8381931338679078155}
   - component: {fileID: 2891312375008534949}
   - component: {fileID: 7129324420564409710}
+  - component: {fileID: 3910065611506173280}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -125,7 +126,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
   gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
-  m_activeFragment: {fileID: 0}
+  m_activeFragment: {fileID: 11400000, guid: 5c2a705b0c3b4c64298e07e703e2c0e6, type: 2}
+--- !u!114 &3910065611506173280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106663346114255779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d80dc122be848f4fab8af8a7c43d051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_clip: {fileID: 32900000, guid: 467db1db78b36504399348552801bded, type: 3}
+  m_order: 0
 --- !u!1 &6851634613255072099
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,5 +11,6 @@ public class LoaderMultipleScenes : MonoBehaviour
             SceneManager.LoadScene("Cameras", LoadSceneMode.Additive);
             SceneManager.LoadScene("Environment", LoadSceneMode.Additive);
             SceneManager.LoadScene("InputControllers", LoadSceneMode.Additive);
+            SceneManager.LoadScene("VideoPlayer", LoadSceneMode.Additive);
     }
 }

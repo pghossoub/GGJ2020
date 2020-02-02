@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level2/Level2.unity
     guid: a585dc4d43ca59c4086f91f367a00ac6
+  - enabled: 1
+    path: Assets/Scenes/VideoPlayer.unity
+    guid: 1cd8eab07a749224883a8d601efda32d
   m_configObjects: {}

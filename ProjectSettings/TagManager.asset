@@ -10,6 +10,9 @@ TagManager:
   - BackPostIt
   - posZ
   - DropZone
+  - Banc
+  - Loupe
+  - posLoupe
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - 
   - Fragment
   - DropZone
-  - PostIt
+  - Clickable
   - 
   - 
   - 

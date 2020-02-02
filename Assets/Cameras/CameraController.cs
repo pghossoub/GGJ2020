@@ -1,15 +1,31 @@
 ﻿using UnityEngine;
+using UnityEngine.Video;
 
 using Marsheleene.Variables;
 
 public class CameraController : MonoBehaviour
 {
     public Animator m_animator;
+    public BoolVariable isDragging;
+    public StringVariable gameView;
+    public FragmentDrag fragmentDrag;
+    public GameObject fragmentLoupe;
+
+    private VideoFragment videoFragment;
+    private MeshFilter meshFragment;
+
+    private void Start()
+    {
+        gameView.Value = "intro";
+        fragmentLoupe = GameObject.FindGameObjectWithTag("posLoupe");
+        videoFragment = fragmentLoupe.GetComponent<VideoFragment>();
+        meshFragment = fragmentLoupe.GetComponent<MeshFilter>();
+    }
 
     [ContextMenu("State > Intro")]
     public void SwitchToIntro()
     {
-        //m_animator.SetBool(Animator.StringToHash("GameStarted"), true);
+        gameView.Value = "intro";
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
         m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), true);
@@ -20,6 +36,8 @@ public class CameraController : MonoBehaviour
     [ContextMenu("State > Loupe")]
     public void SwitchToLoupe()
     {
+        gameView.Value = "loupe";
+        ActiveFragmentLoupe();
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), true);
         m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
@@ -30,6 +48,8 @@ public class CameraController : MonoBehaviour
     [ContextMenu("State > Table")]
     public void SwitchToTable()
     {
+        gameView.Value = "table";
+        isDragging.Value = false;
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
         m_animator.SetBool(Animator.StringToHash("IsTable"), true);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
@@ -40,6 +60,7 @@ public class CameraController : MonoBehaviour
     [ContextMenu("State > Start")]
     public void SwitchToStart()
     {
+        gameView.Value = "start";
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
         m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), true);
@@ -50,6 +71,7 @@ public class CameraController : MonoBehaviour
     [ContextMenu("State > Montage")]
     public void SwitchToMontage()
     {
+        gameView.Value = "montage";
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
         m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
@@ -60,6 +82,7 @@ public class CameraController : MonoBehaviour
     [ContextMenu("State > Salle")]
     public void SwitchToSalle()
     {
+        gameView.Value = "salle";
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
         m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
@@ -85,5 +108,10 @@ public class CameraController : MonoBehaviour
     //    m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
     //    m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
     //}
-
+    private void ActiveFragmentLoupe()
+    {
+        videoFragment = fragmentDrag.video;
+        fragmentLoupe.SetActive(true);
+        meshFragment.mesh = fragmentDrag.meshFilter.mesh;
+    }
 }

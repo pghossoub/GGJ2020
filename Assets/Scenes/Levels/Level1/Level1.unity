@@ -1861,6 +1861,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
+  fragmentDrag: {fileID: 0}
 --- !u!114 &1384353565634524328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,6 +2001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
+  fragmentDrag: {fileID: 0}
 --- !u!114 &3639943612632111995
 MonoBehaviour:
   m_ObjectHideFlags: 0

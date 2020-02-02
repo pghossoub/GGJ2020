@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b31b3f53baf264596d741e743505d3, type: 3}
-  m_Name: timer
+  m_Script: {fileID: 11500000, guid: d31e2319984a729468fcf457df9633b4, type: 3}
+  m_Name: Fragment Drag
   m_EditorClassIdentifier: 
-  Value: 0
+  fragmentName: 0
+  order: 0
+  video: {fileID: 0}
+  renderer: {fileID: 0}

@@ -157,7 +157,8 @@ MonoBehaviour:
   m_layerMask:
     serializedVersion: 2
     m_Bits: 1024
-  m_exitPostIt: {fileID: 0}
+  isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  fragmentDrag: {fileID: 11400000, guid: d8666d4252ea53449a27041c27922529, type: 2}
 --- !u!4 &2123567538
 Transform:
   m_ObjectHideFlags: 0

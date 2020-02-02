@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 3cd1fba172da82b4d83744f23a0fe0f7
+guid: d31e2319984a729468fcf457df9633b4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - m_animator: {instanceID: 0}
-  - isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6851634613255072106}
   - component: {fileID: 6851634613255072105}
   - component: {fileID: 6851634613255072104}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Fragment_1_1_A
   m_TagString: Fragment
   m_Icon: {fileID: 0}
@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
+  fragmentDrag: {fileID: 11400000, guid: d8666d4252ea53449a27041c27922529, type: 2}
 --- !u!64 &6851634613255072104
 MeshCollider:
   m_ObjectHideFlags: 0

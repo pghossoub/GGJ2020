@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using cakeslice;
 using Marsheleene.Events;
+using Marsheleene.Variables;
 
-public class PostItsController : MonoBehaviour
+public class MouseClickController : MonoBehaviour
 {
     public GameEvent m_startGame;
     public GameEvent m_goToTable;
@@ -15,9 +16,12 @@ public class PostItsController : MonoBehaviour
 
     private Outline _outline;
     // Update is called once per frame
+    public BoolVariable isDragging;
+    public FragmentDrag fragmentDrag;
 
     private void Update()
     {
+
         if (Input.GetButtonDown("Fire1"))
         {
             RaycastHit hit;
@@ -41,6 +45,25 @@ public class PostItsController : MonoBehaviour
                         break;
                     case "BackPostIt":
                         m_goToTable.Raise();
+                        break;
+                    case "Loupe":
+                        m_goToLoupe.Raise();
+                        break;
+                    case "Banc":
+                        m_goToMontage.Raise();
+                        break;
+                    case "Fragment":
+                        if (!isDragging.Value)
+                        {
+                            isDragging.Value = true;
+                            fragmentDrag.order = hit.collider.GetComponent<VideoFragment>().m_order;
+                            fragmentDrag.meshFilter = hit.collider.GetComponent<MeshFilter>();
+                            fragmentDrag.fragmentName = hit.collider.name;
+                            fragmentDrag.video = hit.collider.GetComponent<VideoFragment>();
+                        } else if (hit.collider.name == fragmentDrag.fragmentName)
+                        {
+                            isDragging.Value = false;
+                        }
                         break;
                 }
             }

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b31b3f53baf264596d741e743505d3, type: 3}
-  m_Name: timer
+  m_Script: {fileID: 11500000, guid: d23e8436e1db8b240ac64c7e924daa80, type: 3}
+  m_Name: gameView
   m_EditorClassIdentifier: 
-  Value: 0
+  Value: 

@@ -246,6 +246,110 @@ RenderTexture:
     m_WrapW: 1
   m_Dimension: 2
   m_VolumeDepth: 1
+--- !u!1001 &291011345
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5694279851143127702}
+    m_Modifications:
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0005260839
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.17482525
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0013942561
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9845984
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.031000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 323.283
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.16800001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524943, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_Name
+      value: fragment_loupe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524943, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007122328851524943, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+        type: 3}
+      propertyPath: m_TagString
+      value: posLoupe
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efea06f7d87f2ed40ae8dbf372beeee0, type: 3}
+--- !u!1 &342532866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1007122328851524943, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+    type: 3}
+  m_PrefabInstance: {fileID: 291011345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &342532867 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1007122328851524940, guid: efea06f7d87f2ed40ae8dbf372beeee0,
+    type: 3}
+  m_PrefabInstance: {fileID: 291011345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &342532868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342532866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfaf8f9ec6aaee24eaeaa014dbba5c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fragmentDrag: {fileID: 11400000, guid: d8666d4252ea53449a27041c27922529, type: 2}
 --- !u!1 &390051592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,7 +2546,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa223e157d6e8644a23183b8254a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDragging: {fileID: 0}
+  isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
+  fragmentDrag: {fileID: 0}
 --- !u!114 &2232205465598030213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2450,7 +2556,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2232205465598030211}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
   m_Name: 
@@ -2864,7 +2970,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa223e157d6e8644a23183b8254a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDragging: {fileID: 0}
+  isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
+  fragmentDrag: {fileID: 0}
 --- !u!114 &4433593371838311645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2872,7 +2980,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4433593371838311643}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
   m_Name: 
@@ -2909,9 +3017,9 @@ GameObject:
   - component: {fileID: 4518212042950015177}
   - component: {fileID: 4518212042950015176}
   - component: {fileID: 4518212042950015178}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: loupe
-  m_TagString: DropZone
+  m_TagString: Loupe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2929,6 +3037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
+  fragmentDrag: {fileID: 0}
 --- !u!114 &4518212042950015177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2992,7 +3102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa223e157d6e8644a23183b8254a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDragging: {fileID: 0}
+  isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
+  fragmentDrag: {fileID: 0}
 --- !u!114 &4520214703260663316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3000,7 +3112,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4520214703260663314}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
   m_Name: 
@@ -3092,7 +3204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa223e157d6e8644a23183b8254a5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDragging: {fileID: 0}
+  isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
+  fragmentDrag: {fileID: 0}
 --- !u!114 &4725071305580055543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3100,7 +3214,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4725071305580055541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
   m_Name: 
@@ -3376,6 +3490,7 @@ Transform:
   m_Children:
   - {fileID: 2099352206132922772}
   - {fileID: 61397406583291563}
+  - {fileID: 342532867}
   m_Father: {fileID: 2229414914636324608}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -56.854004, z: 0}
@@ -3650,9 +3765,9 @@ GameObject:
   - component: {fileID: 6598243438274726807}
   - component: {fileID: 6598243438274726808}
   - component: {fileID: 6598243438274726806}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: banc_de_montage
-  m_TagString: DropZone
+  m_TagString: Banc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3670,6 +3785,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
+  gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
+  fragmentDrag: {fileID: 0}
 --- !u!114 &6598243438274726807
 MonoBehaviour:
   m_ObjectHideFlags: 0

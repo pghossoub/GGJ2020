@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/InputControllers.unity.meta
 guid: 3e7e346b27395514abe68d4893c9ad52
+=======
+guid: b47123f6a126d434eb01cdfb8c28b95d
+folderAsset: yes
+>>>>>>> 0026bdfbe98f9304bb77db863edec8bfb456891b:Assets/Cameras.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

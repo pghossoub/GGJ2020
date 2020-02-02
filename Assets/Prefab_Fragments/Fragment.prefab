@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 2891312375008534949}
   - component: {fileID: 7129324420564409710}
   - component: {fileID: 3910065611506173280}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Fragment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,9 +151,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6851634613255072100}
   - component: {fileID: 8355025854891172278}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Fragment
-  m_TagString: Fragment
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

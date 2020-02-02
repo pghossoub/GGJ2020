@@ -21,7 +21,7 @@ public class MouseOutline : MonoBehaviour
     }
     void Update()
     {
-        TotoAfrica();
+        CheckOutline();
     }
 
     private bool CastRay(LayerMask layerMask, out RaycastHit hit)
@@ -35,7 +35,7 @@ public class MouseOutline : MonoBehaviour
             );
     }
 
-    private void TotoAfrica()
+    private void CheckOutline()
     {
         RaycastHit hit;
         if (m_isDragging.Value)

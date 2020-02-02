@@ -9,28 +9,32 @@ public class IntroController : StateMachineBehaviour
     public float m_introDelay;
     public GameEvent m_goToTableEvent;
 
-    private float _counter;
-    private bool _count;
+    // private float _counter;
+    // private bool _count;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        _counter = 0;
-        _count = true;
-    }
+    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+        //    _counter = 0;
+        //    _count = true;
+    //}
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (!_count)
-            return;
+        //if (!_count)
+        //    return;
 
-        _counter += Time.deltaTime;
+        //_counter += Time.deltaTime;
 
-        if (_counter >= m_introDelay)
+        //if (_counter >= m_introDelay)
+        //{
+        //    m_goToTableEvent.Raise();
+        //    _count = false;
+        //}
+        if (Input.GetMouseButtonDown(0))
         {
             m_goToTableEvent.Raise();
-            _count = false;
         }
     }
 

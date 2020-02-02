@@ -12,6 +12,8 @@ public class StartMenuController : MonoBehaviour
     private Outline _outline;
     // Update is called once per frame
 
+    public GameObject m_exitPostIt;
+
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -23,6 +25,11 @@ public class StartMenuController : MonoBehaviour
             {
                 if (hit.collider.tag == "StartPostIt")
                 {
+                    Destroy(hit.collider.gameObject.GetComponent<MeshCollider>());
+                    foreach (GameObject myObject in GameObject.FindGameObjectsWithTag("ExitPostIt"))
+                    {
+                        Destroy(myObject.GetComponent<MeshCollider>());
+                    }
                     m_startGame.Raise();
                 }
                 else if (hit.collider.tag == "ExitPostIt")

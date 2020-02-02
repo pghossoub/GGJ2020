@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+using DG.Tweening;
+
 using Marsheleene.Variables;
 
 public class WorkbenchController : MonoBehaviour
@@ -25,7 +27,8 @@ public class WorkbenchController : MonoBehaviour
         if (m_isDragging.Value)
         {
             _originalPosition = m_activeFragment.Value.transform.position;
-            m_activeFragment.Value.transform.position = m_activeFragmentPosition.position;
+
+            m_activeFragment.Value.transform.DOMove(m_activeFragmentPosition.position, m_changePositionDelay.Value).SetEase(Ease.InOutSine);
         }
     }
 
@@ -37,7 +40,10 @@ public class WorkbenchController : MonoBehaviour
     private IEnumerator _ChangePositionDelayed()
     {
         yield return new WaitForSeconds(m_changePositionDelay.Value);
-        m_activeFragment.Value.transform.position = _originalPosition;
+        m_activeFragment.Value.transform.DOMove(_originalPosition, m_changePositionDelay.Value).SetEase(Ease.InOutSine).OnComplete(() =>
+        {
+            m_activeFragment.Value.GetComponentInParent<Animator>().enabled = true;
+        });
     }
 
 

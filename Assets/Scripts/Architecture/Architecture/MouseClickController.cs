@@ -60,7 +60,6 @@ public class MouseClickController : MonoBehaviour
                         break;
                     case "BackPostIt":
                         m_goToTable.Raise();
-                        m_activeFragment.Value.GetComponentInParent<Animator>().enabled = true;
                         break;
                     case "Loupe":
                         {

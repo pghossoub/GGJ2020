@@ -2,10 +2,14 @@
 using UnityEngine;
 using UnityEngine.Video;
 
+using Marsheleene.Variables;
+
 public class VideoPlayerController : MonoBehaviour
 {
     public VideoFragmentVariable m_activeFragment;
     public VideoFragmentList m_workbenchFragments;
+
+    public FloatReference m_playLoupeDelay;
 
     public Renderer m_loupe;
     public Renderer m_screen;
@@ -35,6 +39,7 @@ public class VideoPlayerController : MonoBehaviour
 
     private IEnumerator _PlayLoupe()
     {
+        yield return new WaitForSeconds(m_playLoupeDelay.Value);
         Material originalMaterial = _activeRenderer.material;
         _activeRenderer.sharedMaterial = m_videoMaterial;
 

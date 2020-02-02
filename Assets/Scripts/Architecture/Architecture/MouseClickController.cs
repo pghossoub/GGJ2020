@@ -115,11 +115,25 @@ public class MouseClickController : MonoBehaviour
                         if (!isDragging.Value)
                         {
                             isDragging.Value = true;
-                            hit.collider.GetComponent<Animator>().SetBool("isDragging", true);
-                            //fragmentDrag.order = hit.collider.GetComponent<VideoFragment>().m_order;
-                            //fragmentDrag.meshFilter = hit.collider.GetComponent<MeshFilter>();
-                            //fragmentDrag.fragmentName = hit.collider.name;
-                            //fragmentDrag.video = hit.collider.GetComponent<VideoFragment>();
+                            switch(hit.collider.name)
+                            {
+                                case "Fragment_1_1_A":
+                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect1", true);
+                                    break;
+                                case "Fragment_1_1_B":
+                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", true);
+                                    break;
+                                case "Fragment_1_1_C":
+                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", true);
+                                    break;
+                                case "Fragment_1_1_D":
+                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", true);
+                                    break;
+                                case "Fragment_1_1_E":
+                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", true);
+                                    break;
+                            }
+
                             m_activeFragment.Value = hit.collider.GetComponent<VideoFragment>();
                         }
                         //else if (hit.collider.name == fragmentDrag.fragmentName)
@@ -127,7 +141,24 @@ public class MouseClickController : MonoBehaviour
                         {
                             m_activeFragment.Value = null;
                             isDragging.Value = false;
-                            hit.collider.GetComponent<Animator>().SetBool("isDragging", false);
+                            switch (hit.collider.name)
+                            {
+                                case "Fragment_1_1_A":
+                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect1", false);
+                                    break;
+                                case "Fragment_1_1_B":
+                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", false);
+                                    break;
+                                case "Fragment_1_1_C":
+                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", false);
+                                    break;
+                                case "Fragment_1_1_D":
+                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", false);
+                                    break;
+                                case "Fragment_1_1_E":
+                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", false);
+                                    break;
+                            }
                         }
                         break;
                 }

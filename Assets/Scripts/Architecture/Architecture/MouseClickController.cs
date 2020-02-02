@@ -71,6 +71,8 @@ public class MouseClickController : MonoBehaviour
                         break;
                     case "Banc":
                         // Poser le fragment à la bonne position sur le bench
+                        m_activeFragment.Value.GetComponentInParent<Animator>().SetBool("IsActive", false);
+                        //m_activeFragment.Value.GetComponentInParent<Animator>().enabled = false;
                         m_goToMontage.Raise();
                         break;
                     case "Workbench1":
@@ -144,9 +146,8 @@ public class MouseClickController : MonoBehaviour
                     case "Fragment":
                         if (!isDragging.Value)
                         {
-                            Debug.Break();
                             isDragging.Value = true;
-                            hit.collider.GetComponent<Animator>().SetBool("IsActive", true);
+                            hit.collider.GetComponentInParent<Animator>().SetBool("IsActive", true);
                             //switch(hit.collider.name)
                             //{
                             //    case "Fragment_1_1_A":
@@ -172,7 +173,7 @@ public class MouseClickController : MonoBehaviour
                         {
                             m_activeFragment.Value = null;
                             isDragging.Value = false;
-                            hit.collider.GetComponent<Animator>().SetBool("IsActive", false);
+                            hit.collider.GetComponentInParent<Animator>().SetBool("IsActive", false);
 
                             //switch (hit.collider.name)
                             //{

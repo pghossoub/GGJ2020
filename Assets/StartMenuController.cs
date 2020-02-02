@@ -1,19 +1,34 @@
 ﻿using UnityEngine;
 using Marsheleene.Events;
+using cakeslice;
 
 public class StartMenuController : MonoBehaviour
 {
     public GameEvent m_startGame;
+    public LayerMask m_layerMask;
 
+    private Vector3 _mousePosition;
+    private Outline _outline;
     // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-    //    //Recast: If i touch a post-it
+        if (Input.GetButtonDown("Fire1"))
+        {
+            RaycastHit hit;
+            _mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
 
-    //    //If its the start one
-    //    m_startGame.Raise();
-
-    //    //Else
-    //    Application.Quit();
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(_mousePosition), out hit, float.PositiveInfinity, m_layerMask))
+            {
+                if (hit.collider.tag == "StartPostIt")
+                {
+                    m_startGame.Raise();
+                }
+                else if (hit.collider.tag == "ExitPostIt")
+                {
+                    Application.Quit();
+                }
+            }
+        }
     }
 }

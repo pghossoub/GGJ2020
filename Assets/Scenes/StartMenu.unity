@@ -150,6 +150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_startGame: {fileID: 11400000, guid: 857b0f7c278231640baf5c24b12adda0, type: 2}
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!4 &2123567538
 Transform:
   m_ObjectHideFlags: 0

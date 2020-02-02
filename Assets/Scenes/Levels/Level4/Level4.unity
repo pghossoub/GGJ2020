@@ -685,8 +685,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74fa16f746151c04f926dad5d6f3d6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_currentLevel: Level2
-  m_nextLevel: Level3
+  m_currentLevel: Level4
+  m_nextLevel: Level1
+  m_workbenchFragments: {fileID: 11400000, guid: 2f74e42d977e542418a3739c932676f8,
+    type: 2}
 --- !u!4 &320072233
 Transform:
   m_ObjectHideFlags: 0

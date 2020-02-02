@@ -591,7 +591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &320072232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,6 +606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_currentLevel: Level2
   m_nextLevel: Level3
+  m_workbenchFragments: {fileID: 11400000, guid: 2f74e42d977e542418a3739c932676f8,
+    type: 2}
 --- !u!4 &320072233
 Transform:
   m_ObjectHideFlags: 0

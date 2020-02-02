@@ -2,6 +2,7 @@
 using cakeslice;
 using Marsheleene.Events;
 using Marsheleene.Variables;
+using Marsheleene.Events;
 
 public class MouseClickController : MonoBehaviour
 {
@@ -11,6 +12,15 @@ public class MouseClickController : MonoBehaviour
     public GameEvent m_goToMontage;
     public GameEvent m_goToSalle;
     public LayerMask m_layerMask;
+
+    [Header("Events")]
+
+    public GameEvent m_workbenchClickedEvent;
+    public GameEvent m_workbench1ClickedEvent;
+    public GameEvent m_workbench2ClickedEvent;
+    public GameEvent m_workbench3ClickedEvent;
+    public GameEvent m_workbench4ClickedEvent;
+    public GameEvent m_workbench5ClickedEvent;
 
     [Header("Variables")]
     //public FragmentDrag fragmentDrag;
@@ -50,11 +60,57 @@ public class MouseClickController : MonoBehaviour
                         m_goToTable.Raise();
                         break;
                     case "Loupe":
-                        m_goToLoupe.Raise();
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_goToLoupe.Raise();
+                            }
+                        }
                         break;
                     case "Banc":
+                        // Poser le fragment à la bonne position sur le bench
                         m_goToMontage.Raise();
                         break;
+                    case "Workbench1":
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_workbench1ClickedEvent.Raise();
+                            }
+                            break;
+                        }
+                    case "Workbench2":
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_workbench2ClickedEvent.Raise();
+                            }
+                            break;
+                        }
+                    case "Workbench3":
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_workbench3ClickedEvent.Raise();
+                            }
+                            break;
+                        }
+                    case "Workbench4":
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_workbench4ClickedEvent.Raise();
+                            }
+                            break;
+                        }
+                    case "Workbench5":
+                        {
+                            if (isDragging.Value)
+                            {
+                                m_workbench5ClickedEvent.Raise();
+                            }
+                            break;
+                        }
                     case "Fragment":
                         if (!isDragging.Value)
                         {

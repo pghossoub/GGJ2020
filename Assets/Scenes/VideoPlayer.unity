@@ -155,6 +155,10 @@ MonoBehaviour:
   m_activeFragment: {fileID: 11400000, guid: 5c2a705b0c3b4c64298e07e703e2c0e6, type: 2}
   m_workbenchFragments: {fileID: 11400000, guid: 2f74e42d977e542418a3739c932676f8,
     type: 2}
+  m_playLoupeDelay:
+    _useConstant: 1
+    _constantValue: 1
+    Variable: {fileID: 0}
   m_loupe: {fileID: 1618797368}
   m_screen: {fileID: 1960128364}
   m_videoMaterial: {fileID: 2100000, guid: 393a77905024f204ebda891b5c792927, type: 2}

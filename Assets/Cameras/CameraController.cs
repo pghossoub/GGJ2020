@@ -9,7 +9,6 @@ public class CameraController : MonoBehaviour
     public BoolVariable isDragging;
     public StringVariable gameView;
 
-
     private void Start()
     {
         gameView.Value = "intro";

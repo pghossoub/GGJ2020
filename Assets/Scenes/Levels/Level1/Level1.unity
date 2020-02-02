@@ -1712,7 +1712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
   gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
-  fragmentDrag: {fileID: 0}
+  m_activeFragment: {fileID: 0}
 --- !u!114 &1384353565634524328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,7 +1799,7 @@ PrefabInstance:
     - target: {fileID: 1625759604549383422, guid: 9dca6ec2c3165364e837e40ed82fb2bc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1625759604549383422, guid: 9dca6ec2c3165364e837e40ed82fb2bc,
         type: 3}
@@ -1835,6 +1835,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fragment_1_1_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625759604549383423, guid: 9dca6ec2c3165364e837e40ed82fb2bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dca6ec2c3165364e837e40ed82fb2bc, type: 3}
@@ -1873,7 +1878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDragging: {fileID: 11400000, guid: db3011210e128ed45915394d2c1fabbf, type: 2}
   gameView: {fileID: 11400000, guid: 5e8f73428e3f5c947bda7112541fe9f3, type: 2}
-  fragmentDrag: {fileID: 0}
+  m_activeFragment: {fileID: 0}
 --- !u!114 &3639943612632111995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1927,6 +1932,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fragment_1_1_C
       objectReference: {fileID: 0}
+    - target: {fileID: 4865413088092940388, guid: 09e1c80028f2b4147844735eceed5fe3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4865413088092940391, guid: 09e1c80028f2b4147844735eceed5fe3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1965,7 +1975,7 @@ PrefabInstance:
     - target: {fileID: 4865413088092940391, guid: 09e1c80028f2b4147844735eceed5fe3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4865413088092940391, guid: 09e1c80028f2b4147844735eceed5fe3,
         type: 3}
@@ -2117,6 +2127,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fragment_1_1_A
       objectReference: {fileID: 0}
+    - target: {fileID: 6851634613255072099, guid: 5528792ccb3f67e4db1245744c4334fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6851634613255072100, guid: 5528792ccb3f67e4db1245744c4334fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2155,7 +2170,7 @@ PrefabInstance:
     - target: {fileID: 6851634613255072100, guid: 5528792ccb3f67e4db1245744c4334fa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6851634613255072100, guid: 5528792ccb3f67e4db1245744c4334fa,
         type: 3}

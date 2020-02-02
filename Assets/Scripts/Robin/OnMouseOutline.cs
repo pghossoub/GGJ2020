@@ -8,7 +8,8 @@ public class OnMouseOutline : MonoBehaviour
 {
     public BoolVariable isDragging;
     public StringVariable gameView;
-    public VideoFragmentVariable fragmentDrag;
+    //public VideoFragmentVariable fragmentDrag;
+    public VideoFragmentVariable m_activeFragment;
 
     void OnMouseEnter()
     {
@@ -65,7 +66,8 @@ public class OnMouseOutline : MonoBehaviour
                     }
                     else
                     {
-                        if (fragmentDrag.Value.name == this.name)
+                        //if (fragmentDrag.Value.name == this.name)
+                        if (m_activeFragment.Value.gameObject == this.gameObject)
                         {
                             GetComponent<Outline>().enabled = true;
                         }

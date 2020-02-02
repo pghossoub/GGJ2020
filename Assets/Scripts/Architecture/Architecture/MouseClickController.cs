@@ -146,24 +146,25 @@ public class MouseClickController : MonoBehaviour
                         if (!isDragging.Value)
                         {
                             isDragging.Value = true;
-                            switch(hit.collider.name)
-                            {
-                                case "Fragment_1_1_A":
-                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect1", true);
-                                    break;
-                                case "Fragment_1_1_B":
-                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect2", true);
-                                    break;
-                                case "Fragment_1_1_C":
-                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect3", true);
-                                    break;
-                                case "Fragment_1_1_D":
-                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect4", true);
-                                    break;
-                                case "Fragment_1_1_E":
-                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect5", true);
-                                    break;
-                            }
+                            hit.collider.GetComponent<Animator>().SetBool("IsActive", true);
+                            //switch(hit.collider.name)
+                            //{
+                            //    case "Fragment_1_1_A":
+                            //        hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect1", true);
+                            //        break;
+                            //    case "Fragment_1_1_B":
+                            //        hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect2", true);
+                            //        break;
+                            //    case "Fragment_1_1_C":
+                            //        hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect3", true);
+                            //        break;
+                            //    case "Fragment_1_1_D":
+                            //        hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect4", true);
+                            //        break;
+                            //    case "Fragment_1_1_E":
+                            //        hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect5", true);
+                            //        break;
+                            //}
 
                             m_activeFragment.Value = hit.collider.GetComponent<VideoFragment>();
                         }
@@ -171,24 +172,26 @@ public class MouseClickController : MonoBehaviour
                         {
                             m_activeFragment.Value = null;
                             isDragging.Value = false;
-                            switch (hit.collider.name)
-                            {
-                                case "Fragment_1_1_A":
-                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect1", false);
-                                    break;
-                                case "Fragment_1_1_B":
-                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect2", false);
-                                    break;
-                                case "Fragment_1_1_C":
-                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect3", false);
-                                    break;
-                                case "Fragment_1_1_D":
-                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect4", false);
-                                    break;
-                                case "Fragment_1_1_E":
-                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect5", false);
-                                    break;
-                            }
+                            hit.collider.GetComponent<Animator>().SetBool("IsActive", false);
+
+                            //switch (hit.collider.name)
+                            //{
+                            //    case "Fragment_1_1_A":
+                            //        hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect1", false);
+                            //        break;
+                            //    case "Fragment_1_1_B":
+                            //        hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect2", false);
+                            //        break;
+                            //    case "Fragment_1_1_C":
+                            //        hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect3", false);
+                            //        break;
+                            //    case "Fragment_1_1_D":
+                            //        hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect4", false);
+                            //        break;
+                            //    case "Fragment_1_1_E":
+                            //        hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect5", false);
+                            //        break;
+                            //}
                         }
                         break;
                 }

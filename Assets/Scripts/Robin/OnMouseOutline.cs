@@ -27,7 +27,7 @@ public class OnMouseOutline : MonoBehaviour
                 }
                 break;
             case "BackPostIt":
-                if (gameView.Value == "loupe" || gameView.Value == "montage")
+                if (gameView.Value == "loupe" && gameView.Value == "montage")
                 {
                     GetComponent<Outline>().enabled = true;
                 }

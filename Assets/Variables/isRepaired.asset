@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d23e8436e1db8b240ac64c7e924daa80, type: 3}
-  m_Name: gameView
+  m_Script: {fileID: 11500000, guid: 7baee99ba54f59746b9db7a4bf15423e, type: 3}
+  m_Name: isRepaired
   m_EditorClassIdentifier: 
-  Value: montage
+  Value: 0

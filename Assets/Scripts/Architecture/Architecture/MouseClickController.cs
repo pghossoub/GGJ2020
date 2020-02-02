@@ -15,16 +15,19 @@ public class MouseClickController : MonoBehaviour
 
     [Header("Events")]
 
-    public GameEvent m_workbenchClickedEvent;
     public GameEvent m_workbench1ClickedEvent;
     public GameEvent m_workbench2ClickedEvent;
     public GameEvent m_workbench3ClickedEvent;
     public GameEvent m_workbench4ClickedEvent;
     public GameEvent m_workbench5ClickedEvent;
+    public GameEvent m_interrupteurFinalEvent;
+    public GameEvent m_repairEditing;
+    public GameEvent m_eraseEditing;
 
     [Header("Variables")]
     //public FragmentDrag fragmentDrag;
     public BoolVariable isDragging;
+    public BoolVariable isRepaired;
     public VideoFragmentVariable m_activeFragment;
 
     private Vector3 _mousePosition;
@@ -108,6 +111,34 @@ public class MouseClickController : MonoBehaviour
                             if (isDragging.Value)
                             {
                                 m_workbench5ClickedEvent.Raise();
+                            }
+                            break;
+                        }
+                    case "Interrupteur":
+                        {
+                            if (!isDragging.Value && isRepaired.Value)
+                            {
+                                m_interrupteurFinalEvent.Raise();
+                                m_goToSalle.Raise();
+                                hit.collider.GetComponent<Animator>().SetTrigger("isPressed");
+                            }
+                            break;
+                        }
+
+                    case "Repair":
+                        {
+                            if (!isDragging.Value)
+                            {
+                                m_repairEditing.Raise();
+
+                            }
+                            break;
+                        }
+                    case "Erase":
+                        {
+                            if (!isDragging.Value)
+                            {
+                                m_eraseEditing.Raise();
                             }
                             break;
                         }

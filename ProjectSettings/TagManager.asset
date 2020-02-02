@@ -19,6 +19,9 @@ TagManager:
   - Workbench4
   - Workbench5
   - Workbench6
+  - Interrupteur
+  - Repair
+  - Erase
   layers:
   - Default
   - TransparentFX

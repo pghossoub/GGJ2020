@@ -44,6 +44,18 @@ public class OnMouseOutline : MonoBehaviour
                     GetComponent<Outline>().enabled = true;
                 }
                 break;
+            case "Repair": 
+                if (gameView.Value == "montage")
+                {
+                    GetComponent<Outline>().enabled = true;
+                }
+                break;
+            case "Erase":
+                if (gameView.Value == "montage")
+                {
+                    GetComponent<Outline>().enabled = true;
+                }
+                break;
             case "Fragment":
                 if (gameView.Value != "start" && gameView.Value != "intro")
                 {

@@ -240,7 +240,7 @@ MonoBehaviour:
   Callback:
     _PersistentCalls:
     - _Target: {fileID: 65245681}
-      _MethodName: SwitchToNormal
+      _MethodName: SwitchToTable
       _PersistentArguments: []
 --- !u!114 &65245685
 MonoBehaviour:
@@ -350,7 +350,7 @@ MonoBehaviour:
     m_VirtualCamera: {fileID: 2042830682}
     m_ActivateAfter: 0
     m_MinDuration: 0
-  - m_FullHash: 622510993
+  - m_FullHash: -1297813568
     m_VirtualCamera: {fileID: 641419925}
     m_ActivateAfter: 0
     m_MinDuration: 0
@@ -381,7 +381,7 @@ MonoBehaviour:
       m_RotationOrder: 4
   m_CustomBlends: {fileID: 0}
   m_ParentHash:
-  - m_Hash: 622510993
+  - m_Hash: -1297813568
     m_ParentHash: 756556552
   - m_Hash: -34231272
     m_ParentHash: 756556552

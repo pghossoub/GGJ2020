@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
     {
         //m_animator.SetBool(Animator.StringToHash("GameStarted"), true);
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
-        m_animator.SetBool(Animator.StringToHash("IsNormal"), false);
+        m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), true);
         m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
         m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
@@ -21,17 +21,17 @@ public class CameraController : MonoBehaviour
     public void SwitchToLoupe()
     {
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), true);
-        m_animator.SetBool(Animator.StringToHash("IsNormal"), false);
+        m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
         m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
         m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
     }
 
-    [ContextMenu("State > Normal")]
-    public void SwitchToNormal()
+    [ContextMenu("State > Table")]
+    public void SwitchToTable()
     {
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
-        m_animator.SetBool(Animator.StringToHash("IsNormal"), true);
+        m_animator.SetBool(Animator.StringToHash("IsTable"), true);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
         m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
         m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
@@ -41,7 +41,7 @@ public class CameraController : MonoBehaviour
     public void SwitchToStart()
     {
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
-        m_animator.SetBool(Animator.StringToHash("IsNormal"), false);
+        m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), true);
         m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
         m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
@@ -51,7 +51,7 @@ public class CameraController : MonoBehaviour
     public void SwitchToMontage()
     {
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
-        m_animator.SetBool(Animator.StringToHash("IsNormal"), false);
+        m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
         m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
         m_animator.SetBool(Animator.StringToHash("IsMontage"), true);
@@ -61,7 +61,7 @@ public class CameraController : MonoBehaviour
     public void SwitchToSalle()
     {
         m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
-        m_animator.SetBool(Animator.StringToHash("IsNormal"), false);
+        m_animator.SetBool(Animator.StringToHash("IsTable"), false);
         m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
         m_animator.SetBool(Animator.StringToHash("IsSalle"), true);
         m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
@@ -71,7 +71,7 @@ public class CameraController : MonoBehaviour
     //{
     //    m_animator.SetBool(Animator.StringToHash("ItsAWin"), true);
     //    m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
-    //    m_animator.SetBool(Animator.StringToHash("IsNormal"), false);
+    //    m_animator.SetBool(Animator.StringToHash("IsTable"), false);
     //    m_animator.SetBool(Animator.StringToHash("IsIntro"), true);
     //    m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
     //    m_animator.SetBool(Animator.StringToHash("IsMontage"), false);
@@ -80,7 +80,7 @@ public class CameraController : MonoBehaviour
     //{
     //    m_animator.SetBool(Animator.StringToHash("ItsAWin"), false);
     //    m_animator.SetBool(Animator.StringToHash("IsLoupe"), false);
-    //    m_animator.SetBool(Animator.StringToHash("IsNormal"), true);
+    //    m_animator.SetBool(Animator.StringToHash("IsTable"), true);
     //    m_animator.SetBool(Animator.StringToHash("IsIntro"), false);
     //    m_animator.SetBool(Animator.StringToHash("IsSalle"), false);
     //    m_animator.SetBool(Animator.StringToHash("IsMontage"), false);

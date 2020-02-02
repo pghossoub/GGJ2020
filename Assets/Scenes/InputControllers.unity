@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 2123567538}
   - component: {fileID: 2123567537}
   m_Layer: 0
-  m_Name: StartMenuController
+  m_Name: PostItsController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,9 +150,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_startGame: {fileID: 11400000, guid: 857b0f7c278231640baf5c24b12adda0, type: 2}
+  m_goToTable: {fileID: 11400000, guid: f5c517cb85b6b9442b6f8f55dcc163cb, type: 2}
+  m_goToLoupe: {fileID: 11400000, guid: 2d1cd364ad615174187d9d6ed6f3b9cc, type: 2}
+  m_goToMontage: {fileID: 11400000, guid: 8f39579a7e18d1742af36ef16292dc6b, type: 2}
+  m_goToSalle: {fileID: 11400000, guid: e41c1a3dfe210d4428a9917686aaa193, type: 2}
   m_layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  m_exitPostIt: {fileID: 0}
 --- !u!4 &2123567538
 Transform:
   m_ObjectHideFlags: 0

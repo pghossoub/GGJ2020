@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 137c65bfc1c987340a2b2133f3ed2088
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_startGame: {instanceID: 0}
+  - m_goToTable: {instanceID: 0}
+  - m_goToLoupe: {instanceID: 0}
+  - m_goToMontage: {instanceID: 0}
+  - m_goToSalle: {instanceID: 0}
+  - m_exitPostIt: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

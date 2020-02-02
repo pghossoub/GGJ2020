@@ -52,13 +52,6 @@ public class MouseDragDrop : MonoBehaviour
 
                     DropItem(hit.collider.gameObject, hit.collider.transform.position);
                 }
-
-                if((mouseOnObject && hit.collider.CompareTag("Workbench")))
-                {
-
-                    //SetupWorkbench();
-
-                }
                 
               
                 return;

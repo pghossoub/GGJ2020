@@ -62,45 +62,44 @@ public class MouseClickController : MonoBehaviour
                             switch(hit.collider.name)
                             {
                                 case "Fragment_1_1_A":
-                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect1", true);
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect1", true);
                                     break;
                                 case "Fragment_1_1_B":
-                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", true);
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect2", true);
                                     break;
                                 case "Fragment_1_1_C":
-                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", true);
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect3", true);
                                     break;
                                 case "Fragment_1_1_D":
-                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", true);
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect4", true);
                                     break;
                                 case "Fragment_1_1_E":
-                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", true);
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect5", true);
                                     break;
                             }
 
                             m_activeFragment.Value = hit.collider.GetComponent<VideoFragment>();
                         }
-                        //else if (hit.collider.name == fragmentDrag.fragmentName)
-                        else if (hit.collider.gameObject == m_activeFragment.Value.gameObject)
+                        else if (hit.collider.GetComponent<VideoFragment>() == m_activeFragment.Value)
                         {
                             m_activeFragment.Value = null;
                             isDragging.Value = false;
                             switch (hit.collider.name)
                             {
                                 case "Fragment_1_1_A":
-                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect1", false);
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect1", false);
                                     break;
                                 case "Fragment_1_1_B":
-                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", false);
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect2", false);
                                     break;
                                 case "Fragment_1_1_C":
-                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", false);
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect3", false);
                                     break;
                                 case "Fragment_1_1_D":
-                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", false);
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect4", false);
                                     break;
                                 case "Fragment_1_1_E":
-                                    hit.collider.GetComponent<Animator>().SetBool("FragSelect2", false);
+                                    hit.collider.GetComponentInParent<Animator>().SetBool("FragSelect5", false);
                                     break;
                             }
                         }

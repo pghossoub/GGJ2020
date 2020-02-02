@@ -20,7 +20,7 @@ public class MouseClickController : MonoBehaviour
     public GameEvent m_workbench3ClickedEvent;
     public GameEvent m_workbench4ClickedEvent;
     public GameEvent m_workbench5ClickedEvent;
-    public GameEvent m_interrupteurFinalEvent;
+    public GameEvent m_playVideoScreenEvent;
     public GameEvent m_repairEditing;
     public GameEvent m_eraseEditing;
 
@@ -118,9 +118,9 @@ public class MouseClickController : MonoBehaviour
                         {
                             if (!isDragging.Value && isRepaired.Value)
                             {
-                                m_interrupteurFinalEvent.Raise();
-                                m_goToSalle.Raise();
                                 hit.collider.GetComponent<Animator>().SetTrigger("isPressed");
+                                m_goToSalle.Raise();
+                                m_playVideoScreenEvent.Raise();
                             }
                             break;
                         }

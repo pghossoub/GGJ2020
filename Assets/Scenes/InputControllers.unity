@@ -167,7 +167,7 @@ MonoBehaviour:
     type: 2}
   m_workbench5ClickedEvent: {fileID: 11400000, guid: c118b6ed201edd443ac3054eae377d11,
     type: 2}
-  m_interrupteurFinalEvent: {fileID: 11400000, guid: e1fe80996ff22be40a2a12a1851b7971,
+  m_playVideoScreenEvent: {fileID: 11400000, guid: 78402a109ddf0aa48a227a098730152a,
     type: 2}
   m_repairEditing: {fileID: 11400000, guid: 45422990221924a44b85461d3d8627d8, type: 2}
   m_eraseEditing: {fileID: 11400000, guid: aec82a5dbb37690408b869f834061437, type: 2}
